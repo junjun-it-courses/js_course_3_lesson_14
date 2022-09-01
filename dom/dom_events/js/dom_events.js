@@ -4,16 +4,38 @@
 //     }
 // }
 
-const elem = document.getElementById('elem');
+const btn = document.querySelector('[data-btn-click-me]');
 
-// elem.onclick = function() {
+// btn.onclick = function() {
 //     alert('Спасибо');
 // };
 
-// elem.onclick = function(event) {
+// btn.onclick = function(evt) {
+//     console.log(event);
 //     console.log(event.target);
 // };
 
-// elem.addEventListener('click', function(event) {
-//         alert(event.type + " на " + event.currentTarget);
-// });
+
+const btnToolbar = document.querySelector('[data-btn-toolbar]')
+
+// console.log(btnToolbar)
+//
+// btnToolbar.onclick = (evt) => {
+//     console.log(evt.target)
+// }
+//
+// btnToolbar.onclick = (evt) => {
+//     console.log(123)
+// }
+
+btnToolbar.addEventListener('click', (event) => {
+    console.log(event.target)
+})
+
+btnToolbar.addEventListener('click', () => {
+    console.log('hello world')
+})
+
+btnToolbar.addEventListener('click', () => {
+    console.log('hello world 2')
+})

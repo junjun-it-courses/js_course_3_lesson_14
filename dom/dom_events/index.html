@@ -7,11 +7,20 @@
 <body>
 
 <!-- Inline Events -->
+<!--<h1 onmouseover="console.log('hello')" >example</h1>-->
 <!--<input value="Нажми меня" onclick="alert('Клик!')" type="button">-->
 <!--<input type="button" onclick="countRabbits()" value="Считать кроликов!">-->
 
 <!-- DOM Object -->
-<input id="elem" type="button" value="Нажми меня!">
+<input id="elem" type="button" value="Нажми меня!" data-btn-click-me>
+<br>
+<br>
+
+<div data-btn-toolbar>
+    <button>Hello 1</button>
+    <button>Hello 2</button>
+    <button>Hello 3</button>
+</div>
 
 
 <script src="js/dom_events.js"></script>

@@ -1,4 +1,5 @@
 // Создаёт новый элемент с заданным тегом:
+
 // document.createElement(tagName);
 
 // let div = document.createElement('div');
@@ -24,6 +25,7 @@
 // node.append - добавляет узлы или строки в конец node
 // document.body.append(div)
 // setTimeout(function () {
+//     document.querySelector('.alert').append(div)
 //     document.body.append(div)
 // }, 1000)
 
@@ -47,16 +49,18 @@
 // }, 2000)
 
 // Для удаления узла есть методы  - node.remove()
+// document.body.append(div)
+//
 // setTimeout(function () {
-    // div.remove()
-    // document.body.remove()
+//     div.remove()
+//     document.body.remove()
 // } , 5000);
 
 // Все методы вставки автоматически удаляют узлы со старых мест.
 
 
 // let span = document.createElement('span')
-// span.innerText = 'sd;fkajsdghfousd';
+// span.innerText = 'some text';
 // document.body.prepend(span);
 //
 // setTimeout(function () {
@@ -64,11 +68,13 @@
 // }, 3000);
 
 // Клонирование узлов - cloneNode
-// const div = document.querySelector('div.alert');
-// console.log(div)
-//
-// let div2 = div.cloneNode(true); // клонировать сообщение
-// div2.querySelector('strong').innerHTML = 'Всем пока!'; // изменить клонированный элемент
-// setTimeout(function () {
-//     div.after(div2);
-// }, 1000)
+const div = document.querySelector('div.alert');
+console.log(div)
+
+let div2 = div.cloneNode(true); // клонировать сообщение
+console.log(div2)
+
+div2.querySelector('strong').innerHTML = 'Всем пока!'; // изменить клонированный элемент
+setTimeout(function () {
+    div.after(div2);
+}, 1000)
